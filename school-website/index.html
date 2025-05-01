@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sabongka.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
+    <link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAADr+fkA8Pn5AEt/hQCOVDEA8fn5APL5+QDvfT0A8P7/APB+QADx/v8A835AAPn5+QD1e0AA9ntAAPh7QAD3fkAA+ntAALdmOQD0hUMARFn9APuCQwDo7+4ArbKvAOfz+gBLT1oA4X1HAPD49wDx+foA8vn6AM3SzwCVlpMA93tBAKOvsADxgkQAOCwpAPh7QQD5e0EA+ntBAPeBQQD6fkEAhISCAPt+QQD7gUEA//39AOb1+ADt+PgA8Pj4AM1zPQDyej8A835CAPZ+QgD1gz8A94RCAJhbNgBhPSYA3HRAAPyEQgCATy4A/4VFAOnz8wDx8OoAY2NhANze2QDs9PYANCYZAO5+QwDz/PwA9HpAADguHwD5+/kA93pAAPh6QADg7esA+XpAAPODQAD0hkkAumk8AOb39wCGTy8A43pBAOr39wCNTiwA7ff3AMTS0gD1ekEAtWM0APV9QQD5ekEA+npBAPaAQQD7ekEA9YNBAPp9QQD2g0EAXVxXAPqAQQBFVvgA+INBAPuDQQD8g0EA+4REAIZNKgDn9/gA5vr4AGJnZgDj3NUA6/v7APB/PwBWPy8A+n1CAPmDQgD7g0IAg00rAMFrOwDCbTgAoWA2AJyioADf2dYA7Pj8AOt9QwDx+vkA9vb2ALRgNgDN1NEA9HxAAPJ/QADy//8A9XxAAPn6+QBxbGQAy9faAPX//wBNQjkA9n9AAPd/QAD7eUAAmlUxAPh/QAD4//8A+v//APt/QAD8//8A+oJAAPuAQwD///8AW2FfANp6RAAxN08AiI6KAOr59wDs+fcAeXt/AO77/QDsfj4A8vr6APF7PgDyfEEA8H9BAPJ+PgDyf0EAckswAGNTSAD5+voA+vr6ANDU0gDRdkIA+HxBAPl8QQD7fEEA+IJBAPp/QQDadT8AmKOlAGNmZgCsYDgA8HxCAPd4PwDygT8A+HxCAPp8QgD5f0IAYcTTAPt/QgDZdUAAYT4mAL3HyABANScA4/X2AOj19gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAo6OjgEVAT4YmL4R5gKOjo6OjojBXRh8NDlQyDVyjo6OjoxEMeixBcrgPP4FfCqOjo40lJHdRvHaYSGypqLRpo6Ovh5QuBTserBYAARWxfKOARgxSeIsEGJMELQR0YTQLKyMgHJqKXhNgUxqaBKRvPiJDTUIbLUuRuU6DZ5a7iQOuI2aFWBQ5rWhlc2M4F2JKErAOq1qqarUCB2+MOoVZM7qzViVHtpUdflApKqiPsqCjXbc2p2R7KIIJWxBVn5mio6KbiEltpT2Xkic3Rgiio6Ojo3F9RBmdcI4hf54Lo6Ojo6OjdTGma26cBqGjo6Ojo6Ojo6OjkDVMPKKjo6OjowAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+      :root {
+        --header-bg-color: rgba(255, 255, 255, 0.03); /* Very transparent white */
+        --header-backdrop-filter: blur(4px);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --header-bg-color: rgba(30, 30, 30, 0.03); /* Very transparent dark */
+          --header-backdrop-filter: blur(4px);
+        }
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .animate-marquee {
+        display: inline-block;
+        white-space: nowrap;
+        animation: marquee 15s linear infinite;
+      }
+    </style>
+    <script defer src="main.js"></script>
+  </head>
+<body class="bg-gray-50 font-['Roboto'] text-gray-800" style="background-image: url('https://images.pexels.com/photos/414519/pexels-photo-414519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <header class="shadow-md sticky top-0 z-50" style="background-color: var(--header-bg-color); backdrop-filter: var(--header-backdrop-filter); -webkit-backdrop-filter: var(--header-backdrop-filter);">
+    <div class="container mx-auto flex flex-col p-4 space-y-2">
+      <div class="w-full flex items-center justify-between bg-white bg-opacity-30 backdrop-blur-sm rounded-md px-4 py-1">
+        <div class="overflow-hidden whitespace-nowrap max-w-[70%]">
+          <p class="animate-marquee text-black font-semibold text-sm">
+            Selamat datang di SDN 01 Bojongnangka! Pantau terus berita dan kegiatan terbaru kami.
+          </p>
+        </div>
+      </div>
+-      <nav class="hidden md:flex flex-wrap space-x-4 items-center text-sm font-semibold w-full max-w-5xl justify-center text-black" style="text-shadow: -1px -1px 0 #dc2626, 1px -1px 0 #dc2626, -1px 1px 0 #dc2626, 1px 1px 0 #dc2626;">
++      <h1 class="text-3xl font-extrabold tracking-tight font-poppins mb-4 text-black text-center">SDN 01 Bojongnangka</h1>
++      <nav class="hidden md:flex flex-wrap space-x-4 items-center text-sm font-semibold w-full max-w-5xl justify-center text-black" style="">
++        <div class="relative group">
++          <button class="flex items-center space-x-1 hover:underline focus:outline-none" aria-haspopup="true" aria-expanded="false">
++            <span>Profil Sekolah</span>
++            <i class="fas fa-chevron-down text-sm"></i>
++          </button>
++          <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 invisible group-hover:visible group-focus-within:visible z-20">
++            <li><a href="#profile" class="block px-4 py-2 hover:bg-blue-100">Profil Sekolah</a></li>
++            <li><a href="#visi" class="block px-4 py-2 hover:bg-blue-100">Visi & Misi</a></li>
++            <li><a href="#sejarah" class="block px-4 py-2 hover:bg-blue-100">Sejarah Sekolah</a></li>
++          </ul>
++        </div>
+         <div class="relative group">
+           <button class="flex items-center space-x-1 hover:underline focus:outline-none" aria-haspopup="true" aria-expanded="false">
+             <span>Berita</span>
+             <i class="fas fa-chevron-down text-sm"></i>
+           </button>
+           <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 invisible group-hover:visible group-focus-within:visible z-20">
+             <li><a href="#berita" class="block px-4 py-2 hover:bg-blue-100">Berita Terbaru</a></li>
+             <li><a href="#kegiatan" class="block px-4 py-2 hover:bg-blue-100">Kegiatan Sekolah</a></li>
+           </ul>
+         </div>
+        <div class="relative group">
+          <button class="flex items-center space-x-1 hover:underline focus:outline-none" aria-haspopup="true" aria-expanded="false">
+            <span>Keuangan</span>
+            <i class="fas fa-chevron-down text-sm"></i>
+          </button>
+          <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 invisible group-hover:visible group-focus-within:visible z-20">
+            <li><a href="#keuangan" class="block px-4 py-2 hover:bg-blue-100">Laporan Keuangan</a></li>
+            <li><a href="#donasi" class="block px-4 py-2 hover:bg-blue-100">Donasi</a></li>
+          </ul>
+        </div>
+        <div class="relative group">
+          <button class="flex items-center space-x-1 hover:underline focus:outline-none" aria-haspopup="true" aria-expanded="false">
+            <span>Ekstrakurikuler</span>
+            <i class="fas fa-chevron-down text-sm"></i>
+          </button>
+          <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 invisible group-hover:visible group-focus-within:visible z-20">
+            <li><a href="#ekskul" class="block px-4 py-2 hover:bg-blue-100">Daftar Ekstrakurikuler</a></li>
+            <li><a href="#jadwal" class="block px-4 py-2 hover:bg-blue-100">Jadwal Kegiatan</a></li>
+          </ul>
+        </div>
+        <div class="relative group">
+          <button class="flex items-center space-x-1 hover:underline focus:outline-none" aria-haspopup="true" aria-expanded="false">
+            <span>Prestasi</span>
+            <i class="fas fa-chevron-down text-sm"></i>
+          </button>
+          <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 invisible group-hover:visible group-focus-within:visible z-20">
+            <li><a href="#prestasi" class="block px-4 py-2 hover:bg-blue-100">Prestasi Terbaru</a></li>
+            <li><a href="#penghargaan" class="block px-4 py-2 hover:bg-blue-100">Penghargaan</a></li>
+          </ul>
+        </div>
+        <div class="relative group">
+          <button class="flex items-center space-x-1 hover:underline focus:outline-none" aria-haspopup="true" aria-expanded="false">
+            <span>Profil Guru dan Staff</span>
+            <i class="fas fa-chevron-down text-sm"></i>
+          </button>
+          <ul class="absolute left-0 mt-2 w-56 bg-white text-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 invisible group-hover:visible group-focus-within:visible z-20">
+            <li><a href="#profil-guru" class="block px-4 py-2 hover:bg-blue-100">Guru</a></li>
+            <li><a href="#profil-staff" class="block px-4 py-2 hover:bg-blue-100">Staff</a></li>
+          </ul>
+        </div>
+        <div class="relative group">
+          <button class="flex items-center space-x-1 hover:underline focus:outline-none" aria-haspopup="true" aria-expanded="false">
+            <span>Profil Alumni</span>
+            <i class="fas fa-chevron-down text-sm"></i>
+          </button>
+          <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 invisible group-hover:visible group-focus-within:visible z-20">
+            <li><a href="#profil-alumni" class="block px-4 py-2 hover:bg-blue-100">Alumni</a></li>
+            <li><a href="#kegiatan-alumni" class="block px-4 py-2 hover:bg-blue-100">Kegiatan Alumni</a></li>
+          </ul>
+        </div>
+        <div class="relative group">
+          <button class="flex items-center space-x-1 hover:underline focus:outline-none" aria-haspopup="true" aria-expanded="false">
+            <span>Kontak</span>
+            <i class="fas fa-chevron-down text-sm"></i>
+          </button>
+          <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 invisible group-hover:visible group-focus-within:visible z-20">
+            <li><a href="#kontak" class="block px-4 py-2 hover:bg-blue-100">Kontak Sekolah</a></li>
+            <li><a href="#lokasi" class="block px-4 py-2 hover:bg-blue-100">Lokasi</a></li>
+          </ul>
+        </div>
+        <div class="relative group">
+          <button class="flex items-center space-x-1 hover:underline focus:outline-none" aria-haspopup="true" aria-expanded="false">
+            <span>Bahasa</span>
+            <i class="fas fa-chevron-down text-sm"></i>
+          </button>
+          <ul class="absolute right-0 mt-2 w-40 bg-white text-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 invisible group-hover:visible group-focus-within:visible z-20">
+            <li>
+              <a href="#" class="flex items-center px-4 py-2 hover:bg-blue-100 rounded">
+                <span class="mr-2">🇮🇩</span> Indonesia
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center px-4 py-2 hover:bg-blue-100 rounded">
+                <span class="mr-2">🇬🇧</span> English
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="md:hidden bg-red-600 text-white hidden w-full">
+        <ul class="flex flex-col space-y-2 p-4 text-base font-semibold">
+          <li>
+            <button class="w-full flex justify-between items-center focus:outline-none" aria-haspopup="true" aria-expanded="false" id="mobile-profile-btn">
+              Profil Sekolah
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="mobile-profile-menu" class="hidden flex-col mt-2 space-y-1 pl-4">
+              <li><a href="#profile" class="block px-4 py-2 hover:bg-blue-500 rounded">Profil Sekolah</a></li>
+              <li><a href="#visi" class="block px-4 py-2 hover:bg-blue-500 rounded">Visi & Misi</a></li>
+              <li><a href="#sejarah" class="block px-4 py-2 hover:bg-blue-500 rounded">Sejarah Sekolah</a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="w-full flex justify-between items-center focus:outline-none" aria-haspopup="true" aria-expanded="false" id="mobile-berita-btn">
+              Berita
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="mobile-berita-menu" class="hidden flex-col mt-2 space-y-1 pl-4">
+              <li><a href="#berita" class="block px-4 py-2 hover:bg-blue-500 rounded">Berita Terbaru</a></li>
+              <li><a href="#kegiatan" class="block px-4 py-2 hover:bg-blue-500 rounded">Kegiatan Sekolah</a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="w-full flex justify-between items-center focus:outline-none" aria-haspopup="true" aria-expanded="false" id="mobile-keuangan-btn">
+              Keuangan
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="mobile-keuangan-menu" class="hidden flex-col mt-2 space-y-1 pl-4">
+              <li><a href="#keuangan" class="block px-4 py-2 hover:bg-blue-500 rounded">Laporan Keuangan</a></li>
+              <li><a href="#donasi" class="block px-4 py-2 hover:bg-blue-500 rounded">Donasi</a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="w-full flex justify-between items-center focus:outline-none" aria-haspopup="true" aria-expanded="false" id="mobile-ekskul-btn">
+              Ekstrakurikuler
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="mobile-ekskul-menu" class="hidden flex-col mt-2 space-y-1 pl-4">
+              <li><a href="#ekskul" class="block px-4 py-2 hover:bg-blue-500 rounded">Daftar Ekstrakurikuler</a></li>
+              <li><a href="#jadwal" class="block px-4 py-2 hover:bg-blue-500 rounded">Jadwal Kegiatan</a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="w-full flex justify-between items-center focus:outline-none" aria-haspopup="true" aria-expanded="false" id="mobile-prestasi-btn">
+              Prestasi
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="mobile-prestasi-menu" class="hidden flex-col mt-2 space-y-1 pl-4">
+              <li><a href="#prestasi" class="block px-4 py-2 hover:bg-blue-500 rounded">Prestasi Terbaru</a></li>
+              <li><a href="#penghargaan" class="block px-4 py-2 hover:bg-blue-500 rounded">Penghargaan</a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="w-full flex justify-between items-center focus:outline-none" aria-haspopup="true" aria-expanded="false" id="mobile-profil-guru-btn">
+              Profil Guru dan Staff
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="mobile-profil-guru-menu" class="hidden flex-col mt-2 space-y-1 pl-4">
+              <li><a href="#profil-guru" class="block px-4 py-2 hover:bg-blue-500 rounded">Guru</a></li>
+              <li><a href="#profil-staff" class="block px-4 py-2 hover:bg-blue-500 rounded">Staff</a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="w-full flex justify-between items-center focus:outline-none" aria-haspopup="true" aria-expanded="false" id="mobile-profil-alumni-btn">
+              Profil Alumni
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="mobile-profil-alumni-menu" class="hidden flex-col mt-2 space-y-1 pl-4">
+              <li><a href="#profil-alumni" class="block px-4 py-2 hover:bg-blue-500 rounded">Alumni</a></li>
+              <li><a href="#kegiatan-alumni" class="block px-4 py-2 hover:bg-blue-500 rounded">Kegiatan Alumni</a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="w-full flex justify-between items-center focus:outline-none" aria-haspopup="true" aria-expanded="false" id="mobile-kontak-btn">
+              Kontak
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="mobile-kontak-menu" class="hidden flex-col mt-2 space-y-1 pl-4">
+              <li><a href="#kontak" class="block px-4 py-2 hover:bg-blue-500 rounded">Kontak Sekolah</a></li>
+              <li><a href="#lokasi" class="block px-4 py-2 hover:bg-blue-500 rounded">Lokasi</a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="w-full flex justify-between items-center focus:outline-none" aria-haspopup="true" aria-expanded="false" id="mobile-language-btn">
+              Bahasa
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="mobile-language-menu" class="hidden flex-col mt-2 space-y-1 pl-4">
+              <li>
+                <a href="#" class="flex items-center px-4 py-2 hover:bg-blue-500 rounded">
+                  <span class="mr-2">🇮🇩</span> Indonesia
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center px-4 py-2 hover:bg-blue-500 rounded">
+                  <span class="mr-2">🇬🇧</span> English
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+  <main>
+    <section class="flex items-center justify-center h-screen bg-gray-50 bg-opacity-70" style="background-image: url('https://images.pexels.com/photos/414519/pexels-photo-414519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <h1 class="text-5xl font-extrabold font-poppins text-black text-center" style="text-shadow: -1px -1px 0 #dc2626, 1px -1px 0 #dc2626, -1px 1px 0 #dc2626, 1px 1px 0 #dc2626;">
+        SDN 01 Bojongnangka
+      </h1>
+    </section>
+    <section class="container mx-auto p-6">
+      <section id="profile" class="mb-12 pt-12">
+        <h2 class="text-3xl font-semibold mb-4">Profil Sekolah</h2>
+        <div id="school-profile" class="bg-white p-6 rounded-lg shadow-md"></div>
+      </section>
+
+    <section id="slideshow" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Galeri Foto</h2>
+      <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg">
+        <div id="slides" class="flex transition-transform duration-500 ease-in-out"></div>
+        <button id="prevSlide" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-blue-700 text-white p-2 rounded-full hover:bg-blue-800 focus:outline-none">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="nextSlide" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-blue-700 text-white p-2 rounded-full hover:bg-blue-800 focus:outline-none">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <section id="activities">
+      <h2 class="text-3xl font-semibold mb-4">Kegiatan Sekolah</h2>
+      <div id="school-activities" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <section id="visi" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Visi & Misi</h2>
+      <p class="bg-white p-6 rounded-lg shadow-md">Visi dan misi sekolah akan ditampilkan di sini.</p>
+    </section>
+
+    <section id="sejarah" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Sejarah Sekolah</h2>
+      <p class="bg-white p-6 rounded-lg shadow-md">Sejarah sekolah akan ditampilkan di sini.</p>
+    </section>
+
+    <section id="ekskul" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Ekstrakurikuler</h2>
+      <p class="bg-white p-6 rounded-lg shadow-md">Informasi ekstrakurikuler akan ditampilkan di sini.</p>
+    </section>
+
+    <section id="prestasi" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Prestasi</h2>
+      <p class="bg-white p-6 rounded-lg shadow-md">Prestasi sekolah akan ditampilkan di sini.</p>
+    </section>
+  </main>
+
+  <footer class="bg-blue-700 text-white p-6 mt-12 text-center">
+    <div class="container mx-auto flex justify-center space-x-6 mb-4">
+      <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Meta" class="hover:text-gray-300 text-2xl"><i class="fab fa-facebook"></i></a>
+      <a href="https://wa.me/1234567890" target="_blank" rel="noopener" aria-label="WhatsApp" class="hover:text-gray-300 text-2xl"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-gray-300 text-2xl"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube" class="hover:text-gray-300 text-2xl"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="TikTok" class="hover:text-gray-300 text-2xl"><i class="fab fa-tiktok"></i></a>
+    </div>
+    &copy; 2024 SDN 01 Bojongnangka. All rights reserved.
+  </footer>
+</body>
+</html>
